@@ -7,17 +7,16 @@ function Header() {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt=""
-            // TODO: replace logo with SVG
-            src="/logo.png"
+            src="logo.png"
             width="30"
             height="30"
-            className="d-inline-block align-top"
+            className="d-inline-block"
           />{" "}
-          The Neighborhood Score
         </Navbar.Brand>
+
         <Nav className="me-auto">
           <NavLink href="/about">About us</NavLink>
           <NavLink href="/neighborhood">Neighborhood</NavLink>

@@ -1,25 +1,26 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 
 function SearchCard() {
   return (
-    <>
-      <Card
-        style={{ width: "80rem" }}
-        class="col d-flex justify-content-center"
-      >
-        <Card.Body>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-        <Card.Img
-          variant="bottom"
-          src="https://images.unsplash.com/photo-1557335200-a65f7f032602?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2079&q=80"
-        />
-      </Card>
-    </>
+    <div class="container">
+      <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+          <div class="search">
+            <i class="fa fa-search"></i>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Have a question? Ask Now"
+            ></input>
+            <button class="btn btn-primary">Search</button>
+            <p class="text-right text-muted">
+              Unsure about your search? Take a free quiz with us!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
