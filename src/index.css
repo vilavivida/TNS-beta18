@@ -1,4 +1,26 @@
 /* TODO: Update font-family */
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p.about {
+  position: absolute;
+  width: 1198px;
+  height: 528px;
+  left: 100px;
+  top: 130px;
+
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 33px;
+}
+
 body {
   background-color: #e5e5e5;
   font-family: "Roboto", sans-serif;
@@ -61,4 +83,18 @@ body {
   height: 50px;
   width: 110px;
   background: gainsboro;
+}
+
+img.footer_logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto; /* to keep proportions */
+  height: auto; /* to keep proportions */
+  max-width: 100%; /* not to stand out from div */
+  max-height: 100%; /* not to stand out from div */
+  margin: auto auto 0; /* position to bottom and center */
+  opacity: 0.5;
 }

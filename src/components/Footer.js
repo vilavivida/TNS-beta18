@@ -1,5 +1,7 @@
 import React from "react";
 
+// TODO: adjust the color theme of footer
+// TODO: add footer to the stylesheet
 function Footer() {
   return (
     <footer
@@ -78,10 +80,7 @@ function Footer() {
         class="text-center text-dark p-3"
         styles={{ "background-color": "#f1f1f1" }}
       >
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
+        © 2021 The Neighborhood Score
       </div>
       {/* <!-- Copyright --> */}
     </footer>
