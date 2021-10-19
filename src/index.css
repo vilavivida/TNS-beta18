@@ -1,16 +1,13 @@
+/* TODO: Update font-family */
 body {
-  background-color: rgba(248, 246, 246, 0.1);
-  font-family: "Poppins", sans-serif;
+  background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
   font-weight: 1000;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-size: 24px;
 }
 
 .body {
-  margin: 1;
+  margin: 2;
 }
 
 .Card.Img {
@@ -48,7 +45,7 @@ code {
 
 .search input:focus {
   box-shadow: none;
-  border: 2px solid blue;
+  border: 2px solid gainsboro;
 }
 
 .search .fa-search {
@@ -63,5 +60,5 @@ code {
   right: 5px;
   height: 50px;
   width: 110px;
-  background: blue;
+  background: gainsboro;
 }

@@ -5,16 +5,16 @@ import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="light" variant="light">
       <Container>
         <Navbar.Brand href="/">
           <img
             alt=""
-            src="logo.png"
-            width="30"
-            height="30"
-            className="d-inline-block"
-          />{" "}
+            src="Copy of TNS-logo-dark.png"
+            width="125"
+            height="35"
+            className="d-inline-block mt-1"
+          />
         </Navbar.Brand>
 
         <Nav className="me-auto">
