@@ -5,6 +5,8 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { InputGroup } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
+import { DropdownButton } from "react-bootstrap";
+import Dropdown from "@restart/ui/esm/Dropdown";
 // import "./Map.css";
 
 export default function simpleMap() {
@@ -29,15 +31,17 @@ function MapContainer() {
   )
 }
 
-{/* export default simpleMap; */}
+let dropdownli = ['School Quality', 'Percent Married', 'Crime Rate', 'More'];
 
 function MapNavBar() {
   return (
     <Container>
-    <h1>MapNavBar Here</h1>
     <Row>
-    <Col><SearchBar /></Col>
-    <Col><Filter /></Col>
+    <Col xs={2}><SearchBar /></Col>
+    <Col><Filter type={dropdownli[0]}/></Col>
+    <Col><Filter type={dropdownli[1]}/></Col>
+    <Col><Filter type={dropdownli[2]}/></Col>
+    <Col><Filter type={dropdownli[3]}/></Col>
     </Row>
     </Container>
     )
@@ -52,17 +56,21 @@ function SearchBar() {
     <InputGroup className="search">
     <FormControl
       placeholder="Where to?"
-      // aria-label="Recipient's username"
-      // aria-describedby="basic-addon2"
     />
-    {/* <Button variant="outline-secondary" id="button-addon2">
-      Button
-    </Button> */}
     </InputGroup>)
 }
 
-function Filter() {
-  return (<></>)
+
+function Filter({type}) {
+  return (<>
+        <DropdownButton
+          title={type}
+        >
+          <Dropdown.Item eventKey="1">Low</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Medium</Dropdown.Item>
+          <Dropdown.Item eventKey="3">High</Dropdown.Item>
+        </DropdownButton>
+  </>)
 }
 
 // function FilterComponent () {
