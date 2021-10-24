@@ -7,6 +7,7 @@ import { InputGroup } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { DropdownButton } from "react-bootstrap";
 import Dropdown from "@restart/ui/esm/Dropdown";
+
 // import "./Map.css";
 
 export default function simpleMap() {
@@ -25,9 +26,9 @@ export default function simpleMap() {
 
 function MapContainer() {
   return (
-    <>
+    <div className="mapcontainer">
       <h1>Map Container</h1>
-    </>
+    </div>
   )
 }
 
@@ -35,7 +36,7 @@ let dropdownli = ['School Quality', 'Percent Married', 'Crime Rate', 'More'];
 
 function MapNavBar() {
   return (
-    <Container>
+    <Container className="mapnavbar">
     <Row>
     <Col xs={2}><SearchBar /></Col>
     <Col><Filter type={dropdownli[0]}/></Col>
@@ -48,13 +49,14 @@ function MapNavBar() {
 }
 
 function SideList () {
-  return <h1>SideList Here</h1>
+  return <div className="sidelist"><h1>SideList Here</h1></div>
 }
 
 function SearchBar() {
   return (
-    <InputGroup className="search">
-    <FormControl
+    <InputGroup>
+    <FormControl 
+      className="mapsearch"
       placeholder="Where to?"
     />
     </InputGroup>)
@@ -64,6 +66,7 @@ function SearchBar() {
 function Filter({type}) {
   return (<>
         <DropdownButton
+          className="mapfilter"
           title={type}
         >
           <Dropdown.Item eventKey="1">Low</Dropdown.Item>
