@@ -3,6 +3,8 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 // import "./Map.css";
 
 export default function simpleMap() {
@@ -46,20 +48,23 @@ function SideList () {
 }
 
 function SearchBar() {
-  return <h1>SearchBar</h1>
+  return (
+    <InputGroup className="search">
+    <FormControl
+      placeholder="Where to?"
+      // aria-label="Recipient's username"
+      // aria-describedby="basic-addon2"
+    />
+    {/* <Button variant="outline-secondary" id="button-addon2">
+      Button
+    </Button> */}
+    </InputGroup>)
 }
 
 function Filter() {
-  return (<>
-  <h1>Filter</h1>
-  <FilterComponent />
-  <FilterComponent />
-  <FilterComponent />
-  <FilterComponent />
-  </>
-  )
+  return (<></>)
 }
 
-function FilterComponent () {
-  return <></>
-}
+// function FilterComponent () {
+//   return <></>
+// }
