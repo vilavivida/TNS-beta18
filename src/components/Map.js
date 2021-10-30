@@ -9,6 +9,8 @@ import { DropdownButton } from "react-bootstrap";
 import { Dropdown } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
+
 
 import "./test.css";
 
@@ -39,20 +41,20 @@ let dropdownli = ['School Quality', 'Percent Married', 'Crime Rate', 'More'];
 function MapNavBar() {
   return (
     <Container className="mapnavbar">
-    <Row>
-    <Col xs={2}><SearchBar /></Col>
-    <Col><Filter type={dropdownli[0]}/></Col>
-    <Col><Filter type={dropdownli[1]}/></Col>
-    <Col><Filter type={dropdownli[2]}/></Col>
-    <Col><Filter type={dropdownli[3]}/></Col>
-    <Col><Save /></Col>
-    </Row>
+    <Stack direction="horizontal" gap={2}>
+    <div><SearchBar /></div>
+    <div><Filter type={dropdownli[0]}/></div>
+    <div><Filter type={dropdownli[1]}/></div>
+    <div><Filter type={dropdownli[2]}/></div>
+    <div><Filter type={dropdownli[3]}/></div>
+    <div><Save /></div>
+    </Stack>
     </Container>
     )
 }
 
 function SideList () {
-  return (<div bsPrefix="sidelist"><h1>SideList Here</h1>
+  return (<div bsPrefix="sidelist">
   <SideListCard />
   <SideListCard />
   <SideListCard />
