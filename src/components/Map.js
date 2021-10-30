@@ -8,6 +8,7 @@ import { FormControl } from "react-bootstrap";
 import { DropdownButton } from "react-bootstrap";
 import { Dropdown } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 import "./test.css";
 
@@ -37,7 +38,7 @@ let dropdownli = ['School Quality', 'Percent Married', 'Crime Rate', 'More'];
 
 function MapNavBar() {
   return (
-    <Container bsPrefix="mapnavbarr">
+    <Container className="mapnavbar">
     <Row>
     <Col xs={2}><SearchBar /></Col>
     <Col><Filter type={dropdownli[0]}/></Col>
@@ -51,7 +52,23 @@ function MapNavBar() {
 }
 
 function SideList () {
-  return <div className="sidelist"><h1>SideList Here</h1></div>
+  return (<div bsPrefix="sidelist"><h1>SideList Here</h1>
+  <SideListCard />
+  <SideListCard />
+  <SideListCard />
+  <SideListCard />
+  </div>)
+}
+
+function SideListCard () {
+  return (<>
+    <Card bsPrefix="listcard">
+      <Card.Img src="CardPlaceHolder.png" bsPrefix="listcardimage"/>
+      <Card.Title>Card Title</Card.Title>
+      <Card.Body>This is some text within a card body.</Card.Body>
+    </Card>
+
+  </>)
 }
 
 function SearchBar() {
@@ -77,10 +94,6 @@ function Filter({type}) {
         </DropdownButton>
   </>)
 }
-
-// function FilterComponent () {
-//   return <></>
-// }
 
 function Save() {
   return (<>
