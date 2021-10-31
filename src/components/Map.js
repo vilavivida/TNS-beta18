@@ -41,7 +41,7 @@ let dropdownli = ['School Quality', 'Percent Married', 'Crime Rate', 'More'];
 function MapNavBar() {
   return (
     <Container className="mapnavbar">
-    <Stack direction="horizontal" gap={2}>
+    <Stack direction="horizontal">
     <div><SearchBar /></div>
     <div><Filter type={dropdownli[0]}/></div>
     <div><Filter type={dropdownli[1]}/></div>
@@ -54,7 +54,7 @@ function MapNavBar() {
 }
 
 function SideList () {
-  return (<div bsPrefix="sidelist">
+  return (<div className="sidelist">
   <SideListCard />
   <SideListCard />
   <SideListCard />
@@ -66,11 +66,46 @@ function SideListCard () {
   return (<>
     <Card bsPrefix="listcard">
       <Card.Img src="CardPlaceHolder.png" bsPrefix="listcardimage"/>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Body>This is some text within a card body.</Card.Body>
+      <Card.Body bsPrefix="listcardbody">
+        <Container>
+          <Row><h1>WA-01</h1></Row>
+          <Row>
+          <Col><CardData /></Col>
+          <Col><CardData /></Col>
+          <Col><CardData /></Col>
+          <Col><CardData /></Col>
+          </Row>
+        </Container>
+      </Card.Body>
+      <Button>Plus</Button>{' '}
     </Card>
+</>)
+}
 
-  </>)
+// function SideListCard () {
+//   return (
+//     <Stack direction="horizontal" className="listcard">
+//       <img src="CardPlaceHolder.png" className="listcardimage"/>
+//       <Container>
+//         <Row><h1 style={{alignSelf: "flex-start"}}>WA-01</h1></Row>
+//         <Row>
+//         <Col><CardData /></Col>
+//         <Col><CardData /></Col>
+//         <Col><CardData /></Col>
+//         <Col><CardData /></Col>
+//         </Row>
+//       </Container>
+//       <Button>Plus</Button>{' '}
+//     </Stack>
+// )
+// }
+
+function CardData () {
+  return (
+    <>
+      <h3>Some Content Here</h3>
+    </>
+  )
 }
 
 function SearchBar() {
