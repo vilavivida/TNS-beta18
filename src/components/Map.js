@@ -12,7 +12,7 @@ import { Card } from "react-bootstrap";
 import { Stack } from "react-bootstrap";
 
 
-import "./test.css";
+import "./Map.css";
 
 export default function simpleMap() {
   return (
